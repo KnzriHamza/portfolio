@@ -98,7 +98,7 @@
       <!-- Misc -->
       <li class="menu-item">
           <a
-            href="{{route('user')}}"
+            href="{{route('list.user')}}"
             class="menu-link"
           >
             <i class="menu-icon tf-icons bx bx-support"></i>
@@ -117,8 +117,7 @@
       </li>
       <li class="menu-item">
           <a
-            href="https://github.com/themeselection/sneat-html-admin-template-free/issues"
-            target="_blank"
+            href="{{route('list.experience')}}"
             class="menu-link"
           >
             <i class="menu-icon tf-icons bx bx-support"></i>
@@ -127,8 +126,7 @@
         </li>
         <li class="menu-item">
           <a
-            href="https://github.com/themeselection/sneat-html-admin-template-free/issues"
-            target="_blank"
+            href="{{route('list.tools')}}"
             class="menu-link"
           >
             <i class="menu-icon tf-icons bx bx-support"></i>

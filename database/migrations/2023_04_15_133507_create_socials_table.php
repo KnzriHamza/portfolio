@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('socialName');
             $table->string('socialUrl');
             $table->string('socialStatus');
+            $table->string('socialImageUrl');
             $table->timestamps();
         });
     }

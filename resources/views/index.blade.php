@@ -45,14 +45,14 @@
       <div class="flex items-center justify-end">
         <div class="mr-4 sm:mr-8 text-right">
           <span class="text-2xl sm:text-3xl md:text-4xl text-slate-300 font-bold tracking-wide">
-            {{$data->name}}
+            {{$informationData->name}}
           </span>
           <p class="text-sm sm:text-base text-slate-500">
-            {{$data->postStatus}}
+            {{$informationData->postStatus}}
           </p>
         </div>
         <div>
-          <img src="./public/icons8-metamask-logo-96.png" width="96" />
+          <img src="{{asset('frontend/public/icons8-metamask-logo-96.png')}}" width="96" />
         </div>
       </div>
     </div>
@@ -82,7 +82,7 @@
             </p>
           </div>
           <div class="basis-2/3">
-            <p>{{$data->name}}</p>
+            <p>{{$informationData->name}}</p>
           </div>
         </div>
         <div class="flex flex-row mb-4">
@@ -92,7 +92,7 @@
             </p>
           </div>
           <div class="basis-2/3">
-            <p>{{$data->birthdate}}</p>
+            <p>{{$informationData->birthdate}}</p>
           </div>
         </div>
         <div class="flex flex-row mb-4">
@@ -102,7 +102,7 @@
             </p>
           </div>
           <div class="basis-2/3">
-            <p>{{$data->country}}</p>
+            <p>{{$informationData->country}}</p>
           </div>
         </div>
         <div class="flex flex-row mb-4">
@@ -112,7 +112,7 @@
             </p>
           </div>
           <div class="basis-2/3">
-            <p>{{$data->city}}</p>
+            <p>{{$informationData->city}}</p>
           </div>
         </div>
         <div class="flex flex-row mb-4">
@@ -122,7 +122,7 @@
             </p>
           </div>
           <div class="basis-2/3">
-            <p>{{$data->language}}</p>
+            <p>{{$informationData->language}}</p>
           </div>
         </div>
         <div class="flex flex-row mb-4">
@@ -132,7 +132,7 @@
             </p>
           </div>
           <div class="basis-2/3">
-            <p>{{$data->experience}}</p>
+            <p>{{$informationData->experience}}</p>
           </div>
         </div>
         <div class="flex flex-row mb-4">
@@ -142,7 +142,7 @@
             </p>
           </div>
           <div class="basis-2/3">
-            <p>{{$data->status}}</p>
+            <p>{{$informationData->status}}</p>
           </div>
         </div>
       </div>
@@ -164,7 +164,7 @@
             </div>
             <div class="ml-4">
               <a href="" class="text-slate-500 text-sm tracking-wide font-semibold group-hover:text-slate-400 transition ease-in-out duration-100">
-                {{$data->email}}
+                {{$informationData->email}}
               </a>
             </div>
           </div>
@@ -176,7 +176,7 @@
             </div>
             <div class="ml-4">
               <a href="" class="text-slate-500 text-sm tracking-wide font-semibold group-hover:text-slate-400 transition ease-in-out duration-100">
-                {{$data->mobile}}
+                {{$informationData->mobile}}
               </a>
             </div>
           </div>
@@ -193,102 +193,35 @@
         Below is a description of my professional experience along with individual tasks and a breakdown by years.
       </div>
       <ul class="list-inside lg:list-outside list-disc text-gray-200">
+        @foreach ( $experienceData as $experience)
+
         <li class="mb-10">
-          <div class="text-lg font-medium mb-3 text-gray-300">
-            2023 <br class="block sm:hidden" /> <span class="text-blue-600 pl-4 sm:pl-0">>></span> Company Name 1
-          </div>
-          <div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          </div>
-          <div class="mt-4">
-            <p>Major tasks && projects:</p>
-          </div>
-          <div class="ml-8 mt-4">
-            <ul class="list-disc">
-              <li>
-                Description 1
-              </li>
-              <li>
-                Description 2
-              </li>
-              <li>
-                Description 3
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li class="mb-10">
-          <div class="text-lg font-medium mb-3 text-gray-300">
-            2020 <br class="block sm:hidden" /> <span class="text-blue-600 pl-4 sm:pl-0">>></span> Company Name 2
-          </div>
-          <div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          </div>
-          <div class="mt-4">
-            <p>Major tasks && projects:</p>
-          </div>
-          <div class="ml-8 mt-4">
-            <ul class="list-disc">
-              <li>
-                Description 1
-              </li>
-              <li>
-                Description 2
-              </li>
-              <li>
-                Description 3
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li class="mb-10">
-          <div class="text-lg font-medium mb-3 text-gray-300">
-            2018 <br class="block sm:hidden" /> <span class="text-blue-600 pl-4 sm:pl-0">>></span> Company Name 3
-          </div>
-          <div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          </div>
-          <div class="mt-4">
-            <p>Major tasks && projects:</p>
-          </div>
-          <div class="ml-8 mt-4">
-            <ul class="list-disc">
-              <li>
-                Description 1
-              </li>
-              <li>
-                Description 2
-              </li>
-              <li>
-                Description 3
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li class="mb-10">
-          <div class="text-lg font-medium mb-3 text-gray-300">
-            2014 <br class="block sm:hidden" /> <span class="text-blue-600 pl-4 sm:pl-0">>></span> Company Name 4
-          </div>
-          <div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          </div>
-          <div class="mt-4">
-            <p>Major tasks && projects:</p>
-          </div>
-          <div class="ml-8 mt-4">
-            <ul class="list-disc">
-              <li>
-                Description 1
-              </li>
-              <li>
-                Description 2
-              </li>
-              <li>
-                Description 3
-              </li>
-            </ul>
-          </div>
-        </li>
+            <div class="text-lg font-medium mb-3 text-gray-300">
+                {{$experience->year}}  <br class="block sm:hidden" /> <span class="text-blue-600 pl-4 sm:pl-0">>></span> {{$experience->companyName}}
+            </div>
+            <div>
+              <p>{{$experience->description}}</p>
+            </div>
+            <div class="mt-4">
+              <p>Major tasks && projects:</p>
+            </div>
+            <div class="ml-8 mt-4">
+              <ul class="list-disc">
+                <li>
+                  Description 1
+                </li>
+                <li>
+                  Description 2
+                </li>
+                <li>
+                  Description 3
+                </li>
+              </ul>
+            </div>
+          </li>
+        @endforeach
+
+
       </ul>
     </div>
 
@@ -303,119 +236,16 @@
       <div class="flex flex-wrap">
 
         <!-- choose technologies you know or add your own -->
+        @foreach ($toolData as $tool)
+
 
         <div class="flex py-1 sm:py-1.5 px-2 sm:px-3 md:px-4 mr-2 mb-2 bg-slate-900 rounded-xl items-center group duration-150">
-          <img src="./public/icons8-amazon-web-services-96.png" class="w-10 h-10 sm:w-12 sm:h-12 p-1 group-hover:-rotate-[20deg] transition-all ease-in-out duration-150" />
+          <img src="{{$tool->toolImageUrl}}" class="w-10 h-10 sm:w-12 sm:h-12 p-1 group-hover:-rotate-[20deg] transition-all ease-in-out duration-150" />
           <span class="ml-2 sm:ml-3 md:ml-4 text-gray-200 text-sm tracking-wide font-bold cursor-default">
-            AWS
+            {{$tool->toolName}}
           </span>
         </div>
-
-        <div class="flex py-1 sm:py-1.5 px-2 sm:px-3 md:px-4 mr-2 mb-2 bg-slate-900 rounded-xl items-center group duration-150">
-          <img src="./public/icons8-angularjs-96.png" class="w-10 h-10 sm:w-12 sm:h-12 p-1 group-hover:-rotate-[20deg] transition-all ease-in-out duration-150" />
-          <span class="ml-2 sm:ml-3 md:ml-4 text-gray-200 text-sm tracking-wide font-bold cursor-default">
-            Angular
-          </span>
-        </div>
-
-        <div class="flex py-1 sm:py-1.5 px-2 sm:px-3 md:px-4 mr-2 mb-2 bg-slate-900 rounded-xl items-center group duration-150">
-          <img src="./public/icons8-bash-96.png" class="w-10 h-10 sm:w-12 sm:h-12 p-1 group-hover:-rotate-[20deg] transition-all ease-in-out duration-150" />
-          <span class="ml-2 sm:ml-3 md:ml-4 text-gray-200 text-sm tracking-wide font-bold cursor-default">
-            Bash
-          </span>
-        </div>
-
-        <div class="flex py-1 sm:py-1.5 px-2 sm:px-3 md:px-4 mr-2 mb-2 bg-slate-900 rounded-xl items-center group duration-150">
-          <img src="./public/icons8-bitbucket-96.png" class="w-10 h-10 sm:w-12 sm:h-12 p-1 group-hover:-rotate-[20deg] transition-all ease-in-out duration-150" />
-          <span class="ml-2 sm:ml-3 md:ml-4 text-gray-200 text-sm tracking-wide font-bold cursor-default">
-            Bitbucket
-          </span>
-        </div>
-
-        <div class="flex py-1 sm:py-1.5 px-2 sm:px-3 md:px-4 mr-2 mb-2 bg-slate-900 rounded-xl items-center group duration-150">
-          <img src="./public/icons8-css3-96.png" class="w-10 h-10 sm:w-12 sm:h-12 p-1 group-hover:-rotate-[20deg] transition-all ease-in-out duration-150" />
-          <span class="ml-2 sm:ml-3 md:ml-4 text-gray-200 text-sm tracking-wide font-bold cursor-default">
-            CSS3
-          </span>
-        </div>
-
-        <div class="flex py-1 sm:py-1.5 px-2 sm:px-3 md:px-4 mr-2 mb-2 bg-slate-900 rounded-xl items-center group duration-150">
-          <img src="./public/icons8-docker-96.png" class="w-10 h-10 sm:w-12 sm:h-12 p-1 group-hover:-rotate-[20deg] transition-all ease-in-out duration-150" />
-          <span class="ml-2 sm:ml-3 md:ml-4 text-gray-200 text-sm tracking-wide font-bold cursor-default">
-            Docker
-          </span>
-        </div>
-
-        <div class="flex py-1 sm:py-1.5 px-2 sm:px-3 md:px-4 mr-2 mb-2 bg-slate-900 rounded-xl items-center group duration-150">
-          <img src="./public/icons8-flutter-96.png" class="w-10 h-10 sm:w-12 sm:h-12 p-1 group-hover:-rotate-[20deg] transition-all ease-in-out duration-150" />
-          <span class="ml-2 sm:ml-3 md:ml-4 text-gray-200 text-sm tracking-wide font-bold cursor-default">
-            Flutter
-          </span>
-        </div>
-
-        <div class="flex py-1 sm:py-1.5 px-2 sm:px-3 md:px-4 mr-2 mb-2 bg-slate-900 rounded-xl items-center group duration-150">
-          <img src="./public/icons8-github-96.png" class="w-10 h-10 sm:w-12 sm:h-12 p-1 group-hover:-rotate-[20deg] transition-all ease-in-out duration-150" />
-          <span class="ml-2 sm:ml-3 md:ml-4 text-gray-200 text-sm tracking-wide font-bold cursor-default">
-            Github
-          </span>
-        </div>
-
-        <div class="flex py-1 sm:py-1.5 px-2 sm:px-3 md:px-4 mr-2 mb-2 bg-slate-900 rounded-xl items-center group duration-150">
-          <img src="./public/icons8-html-5-96-2.png" class="w-10 h-10 sm:w-12 sm:h-12 p-1 group-hover:-rotate-[20deg] transition-all ease-in-out duration-150" />
-          <span class="ml-2 sm:ml-3 md:ml-4 text-gray-200 text-sm tracking-wide font-bold cursor-default">
-            HTML5
-          </span>
-        </div>
-
-        <div class="flex py-1 sm:py-1.5 px-2 sm:px-3 md:px-4 mr-2 mb-2 bg-slate-900 rounded-xl items-center group duration-150">
-          <img src="./public/icons8-javascript-96.png" class="w-10 h-10 sm:w-12 sm:h-12 p-1 group-hover:-rotate-[20deg] transition-all ease-in-out duration-150" />
-          <span class="ml-2 sm:ml-3 md:ml-4 text-gray-200 text-sm tracking-wide font-bold cursor-default">
-            JavaScript
-          </span>
-        </div>
-
-        <div class="flex py-1 sm:py-1.5 px-2 sm:px-3 md:px-4 mr-2 mb-2 bg-slate-900 rounded-xl items-center group duration-150">
-          <img src="./public/icons8-nuxt-jc-96.png" class="w-10 h-10 sm:w-12 sm:h-12 p-1 group-hover:-rotate-[20deg] transition-all ease-in-out duration-150" />
-          <span class="ml-2 sm:ml-3 md:ml-4 text-gray-200 text-sm tracking-wide font-bold cursor-default">
-            NuxtJS
-          </span>
-        </div>
-
-        <div class="flex py-1 sm:py-1.5 px-2 sm:px-3 md:px-4 mr-2 mb-2 bg-slate-900 rounded-xl items-center group duration-150">
-          <img src="./public/icons8-python-96.png" class="w-10 h-10 sm:w-12 sm:h-12 p-1 group-hover:-rotate-[20deg] transition-all ease-in-out duration-150" />
-          <span class="ml-2 sm:ml-3 md:ml-4 text-gray-200 text-sm tracking-wide font-bold cursor-default">
-            Python
-          </span>
-        </div>
-
-        <div class="flex py-1 sm:py-1.5 px-2 sm:px-3 md:px-4 mr-2 mb-2 bg-slate-900 rounded-xl items-center group duration-150">
-          <img src="./public/icons8-react-native-96.png" class="w-10 h-10 sm:w-12 sm:h-12 p-1 group-hover:-rotate-[20deg] transition-all ease-in-out duration-150" />
-          <span class="ml-2 sm:ml-3 md:ml-4 text-gray-200 text-sm tracking-wide font-bold cursor-default">
-            React
-          </span>
-        </div>
-
-        <div class="flex py-1 sm:py-1.5 px-2 sm:px-3 md:px-4 mr-2 mb-2 bg-slate-900 rounded-xl items-center group duration-150">
-          <img src="./public/icons8-tailwindcss-96.png" class="w-10 h-10 sm:w-12 sm:h-12 p-1 group-hover:-rotate-[20deg] transition-all ease-in-out duration-150" />
-          <span class="ml-2 sm:ml-3 md:ml-4 text-gray-200 text-sm tracking-wide font-bold cursor-default">
-            Tailwindcss
-          </span>
-        </div>
-
-        <div class="flex py-1 sm:py-1.5 px-2 sm:px-3 md:px-4 mr-2 mb-2 bg-slate-900 rounded-xl items-center group duration-150">
-          <img src="./public/icons8-typescript-96.png" class="w-10 h-10 sm:w-12 sm:h-12 p-1 group-hover:-rotate-[20deg] transition-all ease-in-out duration-150" />
-          <span class="ml-2 sm:ml-3 md:ml-4 text-gray-200 text-sm tracking-wide font-bold cursor-default">
-            TypeScript
-          </span>
-        </div>
-
-        <div class="flex py-1 sm:py-1.5 px-2 sm:px-3 md:px-4 mr-2 mb-2 bg-slate-900 rounded-xl items-center group duration-150">
-          <img src="./public/icons8-vue-js-96.png" class="w-10 h-10 sm:w-12 sm:h-12 p-1 group-hover:-rotate-[20deg] transition-all ease-in-out duration-150" />
-          <span class="ml-2 sm:ml-3 md:ml-4 text-gray-200 text-sm tracking-wide font-bold cursor-default">
-            VueJS
-          </span>
-        </div>
-
+        @endforeach
       </div>
     </div>
 
@@ -681,78 +511,20 @@
         Check out my social media.
       </div>
       <div class="grid grid-cols-3 sm:grid-cols-4 gap-2">
-        <a href="" target="_blank">
-          <div class="rounded-xl text-center bg-slate-900 group">
-            <div class="py-4">
-              <div class="flex justify-center mb-2 sm:mb-3 md:mb-4">
-                <img class="w-14 sm:w-20 md:w-24 group-hover:scale-105 group-hover:-rotate-12 ease-in duration-100" src="./public/icons8-facebook-messenger-96.png" width="96" />
+        @foreach ($socialData as $social)
+        <a href="{{$social->socialUrl}}" target="_blank">
+            <div class="rounded-xl text-center bg-slate-900 group">
+              <div class="py-4">
+                <div class="flex justify-center mb-2 sm:mb-3 md:mb-4">
+                  <img class="w-14 sm:w-20 md:w-24 group-hover:scale-105 group-hover:-rotate-12 ease-in duration-100" src="{{$social->socialImageUrl}}" width="96" />
+                </div>
+                <span class="text-sm text-slate-600 font-bold group-hover:tracking-wider ease-in duration-100">
+                    {{$social->socialName}}
+                </span>
               </div>
-              <span class="text-sm text-slate-600 font-bold group-hover:tracking-wider ease-in duration-100">
-                Messenger
-              </span>
             </div>
-          </div>
-        </a>
-        <a href="" target="_blank">
-          <div class="rounded-xl text-center bg-slate-900 group">
-            <div class="py-4">
-              <div class="flex justify-center mb-2 sm:mb-3 md:mb-4">
-                <img class="w-14 sm:w-20 md:w-24 group-hover:scale-105 group-hover:-rotate-12 ease-in duration-100" src="./public/icons8-discord-new-96.png" width="96" />
-              </div>
-              <span class="text-sm text-slate-600 font-bold group-hover:tracking-wider ease-in duration-100">
-                Discord
-              </span>
-            </div>
-          </div>
-        </a>
-        <a href="" target="_blank">
-          <div class="rounded-xl text-center bg-slate-900 group">
-            <div class="py-4">
-              <div class="flex justify-center mb-2 sm:mb-3 md:mb-4">
-                <img class="w-14 sm:w-20 md:w-24 group-hover:scale-105 group-hover:-rotate-12 ease-in duration-100" src="./public/icons8-instagram-96.png" width="96" />
-              </div>
-              <span class="text-sm text-slate-600 font-bold group-hover:tracking-wider ease-in duration-100">
-                Instagram
-              </span>
-            </div>
-          </div>
-        </a>
-        <a href="" target="_blank">
-          <div class="rounded-xl text-center bg-slate-900 group">
-            <div class="py-4">
-              <div class="flex justify-center mb-2 sm:mb-3 md:mb-4">
-                <img class="w-14 sm:w-20 md:w-24 group-hover:scale-105 group-hover:-rotate-12 ease-in duration-100" src="./public/icons8-youtube-96.png" width="96" />
-              </div>
-              <span class="text-sm text-slate-600 font-bold group-hover:tracking-wider ease-in duration-100">
-                YouTube
-              </span>
-            </div>
-          </div>
-        </a>
-        <a href="" target="_blank">
-          <div class="rounded-xl text-center bg-slate-900 group">
-            <div class="py-4">
-              <div class="flex justify-center mb-2 sm:mb-3 md:mb-4">
-                <img class="w-14 sm:w-20 md:w-24 group-hover:scale-105 group-hover:-rotate-12 ease-in duration-100" src="./public/icons8-slack-96.png" width="96" />
-              </div>
-              <span class="text-sm text-slate-600 font-bold group-hover:tracking-wider ease-in duration-100">
-                Slack
-              </span>
-            </div>
-          </div>
-        </a>
-        <a href="" target="_blank">
-          <div class="rounded-xl text-center bg-slate-900 group">
-            <div class="py-4">
-              <div class="flex justify-center mb-2 sm:mb-3 md:mb-4">
-                <img class="w-14 sm:w-20 md:w-24 group-hover:scale-105 group-hover:-rotate-12 ease-in duration-100" src="./public/icons8-linkedin-2-96.png" width="96" />
-              </div>
-              <span class="text-sm text-slate-600 font-bold group-hover:tracking-wider ease-in duration-100">
-                LinkedIn
-              </span>
-            </div>
-          </div>
-        </a>
+          </a>
+        @endforeach
       </div>
     </div>
     <footer class="my-32">
