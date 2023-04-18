@@ -8,7 +8,9 @@
 </p>
 
 
-## Template Credit Goes To <a href="https://github.com/jakubgania/">Jakubgania</a>
+## Frontend Template Credit Goes To <a href="https://github.com/jakubgania/">Jakubgania</a>
+
+## Backend Template Credit Goes To <a href="https://github.com/themeselection/sneat-bootstrap-html-admin-template-free">Sneat Admin</a>
 
 Im Just Doing the Backend for fun :D
 
