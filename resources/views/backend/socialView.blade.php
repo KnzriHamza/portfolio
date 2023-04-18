@@ -7,7 +7,7 @@
     <div class="card">
       <h5 class="card-header">Table Basic</h5>
       <div class="table-responsive text-nowrap">
-        <form method="POST" action="{{route('save.tools')}}">
+        <form method="POST" action="{{route('save.socials')}}">
             @csrf
             <input type="submit">
             <table class="table">
@@ -21,19 +21,21 @@
                 </thead>
                 <tbody class="table-border-bottom-0">
 
-                  @foreach ( $toolData as $tool)
+                  @foreach ( $socialData as $social)
                       <tr>
-                          <td><input type="checkbox" name="selected[]" id="selected" value="{{$tool->toolName}}"
-                              @if ($tool->toolStatus == 1)
+                          <td><input type="checkbox" name="selected[]" id="selected" value="{{$social->socialName}}"
+                              @if ($social->socialStatus == 1)
                                   checked
                               @endif></td>
-                          <td>
-                              <img src="{{$tool->toolImageUrl}}" width="15%" alt="">
+                              <td>{{$social->socialName}}</td>
+                          <td >
+                              <img src="{{$social->socialImageUrl}}" width="15%" alt="">
                           </td>
-                          <td>{{$tool->toolName}}</td>
+
+                          <td><input type="text" name="{{$social->socialUrl}}" id="{{$social->socialUrl}}" placeholder="{{$social->socialUrl}}"></td>
                           <td><span class="badge bg-label-success me-1">
 
-                              @if ($tool->toolStatus == 1)
+                              @if ($social->socialStatus == 1)
                                   Active
                               @else
                                   Disabled

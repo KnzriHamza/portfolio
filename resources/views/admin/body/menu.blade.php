@@ -107,12 +107,11 @@
         </li>
       <li class="menu-item">
         <a
-          href="https://github.com/themeselection/sneat-html-admin-template-free/issues"
-          target="_blank"
+          href="{{route('list.socials')}}"
           class="menu-link"
         >
           <i class="menu-icon tf-icons bx bx-support"></i>
-          <div data-i18n="Support">Information</div>
+          <div data-i18n="Support">Socials</div>
         </a>
       </li>
       <li class="menu-item">
