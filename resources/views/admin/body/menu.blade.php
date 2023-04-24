@@ -134,8 +134,7 @@
         </li>
         <li class="menu-item">
           <a
-            href="https://github.com/themeselection/sneat-html-admin-template-free/issues"
-            target="_blank"
+            href="{{route('list.projects')}}"
             class="menu-link"
           >
             <i class="menu-icon tf-icons bx bx-support"></i>
@@ -144,8 +143,7 @@
         </li>
         <li class="menu-item">
           <a
-            href="https://github.com/themeselection/sneat-html-admin-template-free/issues"
-            target="_blank"
+            href="{{route('list.projects')}}"
             class="menu-link"
           >
             <i class="menu-icon tf-icons bx bx-support"></i>
@@ -154,8 +152,7 @@
         </li>
         <li class="menu-item">
           <a
-            href="https://github.com/themeselection/sneat-html-admin-template-free/issues"
-            target="_blank"
+            href="{{route('list.hobbies')}}"
             class="menu-link"
           >
             <i class="menu-icon tf-icons bx bx-support"></i>

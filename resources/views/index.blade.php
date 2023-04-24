@@ -234,7 +234,6 @@
         Technologies and tools that I use in my projects.
       </div>
       <div class="flex flex-wrap">
-
         <!-- choose technologies you know or add your own -->
         @foreach ($toolData as $tool)
 
@@ -259,117 +258,45 @@
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-2">
 
+        @foreach ($projectsData as $project )
         <div class="bg-slate-900 rounded-xl">
-          <div class="bg-[url('../src/public/amazing-background.webp')] bg-no-repeat bg-cover bg-center rounded-tl-xl rounded-tr-xl relative">
-            <div class="aspect-video bg-gradient-to-b from-transparent to-black">
-              <div class="absolute bottom-0 left-0">
-                <h3 class="text-xl font-bold text-gray-200 m-2 group-hover:invisible">
-                  Project Name 1
-                </h3>
+            <div class="bg-[url('../src/public/amazing-background.webp')] bg-no-repeat bg-cover bg-center rounded-tl-xl rounded-tr-xl relative">
+              <div class="aspect-video bg-gradient-to-b from-transparent to-black">
+                <div class="absolute bottom-0 left-0">
+                  <h3 class="text-xl font-bold text-gray-200 m-2 group-hover:invisible">
+                    {{$project->projectName}}
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div class="m-2">
+              <div class="mb-4">
+                <p class="text-gray-400 text-sm">
+                    {{$project->projectDescription}}
+                    </p>
+              </div>
+              <div class="flex flex-row">
+                <div class="basis-1/2 flex">
+                  <a href="{{$project->liveLink}}" target="_blank" class="bg-gray-800 w-full flex items-center justify-center text-center py-3 rounded-lg mr-1 hover:bg-gray-700 transition ease-in-out duration-100">
+                    <img src="./public/icons8-website-96.png" width="26" />
+                    <span class="text-sm font-normal text-gray-200 tracking-wide ml-3">
+                      live
+                    </span>
+                  </a>
+                </div>
+                <div class="basis-1/2 flex">
+                  <a href="{{$project->githubLink}}" target="_blank" class="bg-gray-800 w-full flex items-center justify-center text-center py-3 rounded-lg ml-1 hover:bg-gray-700 transition ease-in-out duration-100">
+                    <img src="./public/icons8-compare-git-96.png" width="26" />
+                    <span class="text-sm font-normal text-gray-200 tracking-wide ml-3">
+                      github
+                    </span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-          <div class="m-2">
-            <div class="mb-4">
-              <p class="text-gray-400 text-sm">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </div>
-            <div class="flex flex-row">
-              <div class="basis-1/2 flex">
-                <a href="" target="_blank" class="bg-gray-800 w-full flex items-center justify-center text-center py-3 rounded-lg mr-1 hover:bg-gray-700 transition ease-in-out duration-100">
-                  <img src="./public/icons8-website-96.png" width="26" />
-                  <span class="text-sm font-normal text-gray-200 tracking-wide ml-3">
-                    live
-                  </span>
-                </a>
-              </div>
-              <div class="basis-1/2 flex">
-                <a href="" target="_blank" class="bg-gray-800 w-full flex items-center justify-center text-center py-3 rounded-lg ml-1 hover:bg-gray-700 transition ease-in-out duration-100">
-                  <img src="./public/icons8-compare-git-96.png" width="26" />
-                  <span class="text-sm font-normal text-gray-200 tracking-wide ml-3">
-                    github
-                  </span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+        @endforeach
 
-        <div class="bg-slate-900 rounded-xl">
-          <div class="bg-[url('../src/public/amazing-background.webp')] bg-no-repeat bg-cover bg-center rounded-tl-xl rounded-tr-xl relative">
-            <div class="aspect-video bg-gradient-to-b from-transparent to-black">
-              <div class="absolute bottom-0 left-0">
-                <h3 class="text-xl font-bold text-gray-200 m-2 group-hover:invisible">
-                  Project Name 2
-                </h3>
-              </div>
-            </div>
-          </div>
-          <div class="m-2">
-            <div class="mb-4">
-              <p class="text-gray-200 text-sm">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </div>
-            <div class="flex flex-row">
-              <div class="basis-1/2 flex">
-                <a href="" target="_blank" class="bg-gray-800 w-full flex items-center justify-center text-center py-3 rounded-lg mr-1 hover:bg-gray-700 transition ease-in-out duration-100 group">
-                  <!-- hover animation only for test -->
-                  <img class="group-hover:-rotate-12 transition-all ease-in-out duration-100" src="./public/icons8-website-96.png" width="26" />
-                  <span class="text-sm font-normal text-gray-200 tracking-wide ml-3 group-hover:ml-6 transition-all ease-in-out duration-100">
-                    live
-                  </span>
-                </a>
-              </div>
-              <div class="basis-1/2 flex">
-                <a href="" target="_blank" class="bg-gray-800 w-full flex items-center justify-center text-center py-3 rounded-lg ml-1 hover:bg-gray-700 transition ease-in-out duration-100">
-                  <img src="./public/icons8-compare-git-96.png" width="26" />
-                  <span class="text-sm font-normal text-gray-200 tracking-wide ml-3">
-                    github
-                  </span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-slate-900 rounded-xl">
-          <div class="bg-[url('../src/public/amazing-background.webp')] bg-no-repeat bg-cover bg-center rounded-tl-xl rounded-tr-xl relative">
-            <div class="aspect-video bg-gradient-to-b from-transparent to-black">
-              <div class="absolute bottom-0 left-0">
-                <h3 class="text-xl font-bold text-gray-200 m-2 group-hover:invisible">
-                  Project Name 3
-                </h3>
-              </div>
-            </div>
-          </div>
-          <div class="m-2">
-            <div class="mb-4">
-              <p class="text-gray-200 text-sm">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </div>
-            <div class="flex flex-row">
-              <div class="basis-1/2 flex">
-                <a href="" target="_blank" class="bg-gray-800 w-full flex items-center justify-center text-center py-3 rounded-lg mr-1 hover:bg-gray-700 transition ease-in-out duration-100">
-                  <img src="./public/icons8-website-96.png" width="26" />
-                  <span class="text-sm font-normal text-gray-200 tracking-wide ml-3">
-                    live
-                  </span>
-                </a>
-              </div>
-              <div class="basis-1/2 flex">
-                <a href="" target="_blank" class="bg-gray-800 w-full flex items-center justify-center text-center py-3 rounded-lg ml-1 hover:bg-gray-700 transition ease-in-out duration-100">
-                  <img src="./public/icons8-compare-git-96.png" width="26" />
-                  <span class="text-sm font-normal text-gray-200 tracking-wide ml-3">
-                    github
-                  </span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
 
       </div>
     </div>
@@ -445,15 +372,12 @@
         My hobbies and interests.
       </div>
       <div class="text-base text-slate-400 font-medium cursor-default">
-        <span class="underline decoration-2 decoration-lime-400">Sport</span>,
-        <span class="underline decoration-2 decoration-amber-400">Mountain biking</span>,
-        <span class="underline decoration-2 decoration-sky-400">New technologies</span>,
-        <span class="underline decoration-2 decoration-red-400">YouTube</span>,
-        <span class="underline decoration-2 decoration-green-400">Video recording and processing</span>,
-        <span class="underline decoration-2 decoration-purple-400">Photography</span>,
-        <span class="underline decoration-2 decoration-red-400">Netflix</span>,
-        <span class="underline decoration-2 decoration-blue-400">Food</span>,
-        <span class="underline decoration-2 decoration-teal-400">Personal development</span>
+        @foreach ($hobbiesData as $hobby)
+          <span class="underline decoration-2 decoration-{{$hobby->hobbyColor}}-400">
+            {{$hobby->hobbyName}}
+          </span>,
+       @endforeach
+
         <!-- and so on -->
       </div>
     </div>

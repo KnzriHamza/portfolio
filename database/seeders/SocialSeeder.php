@@ -38,7 +38,7 @@ class SocialSeeder extends Seeder
             'socialName' => "Linkedin",
             'socialStatus' => 0,
             'socialUrl' => "social",
-            'socialimageUrl' => "frontend/public/icons8-linkedin-96.png",
+            'socialimageUrl' => "frontend/public/icons8-linkedin-2-96.png",
         ]);
 
         DB::table('socials')->insert([

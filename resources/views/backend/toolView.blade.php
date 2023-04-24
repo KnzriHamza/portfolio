@@ -23,10 +23,17 @@
 
                   @foreach ( $toolData as $tool)
                       <tr>
-                          <td><input type="checkbox" name="selected[]" id="selected" value="{{$tool->toolName}}"
+                          <td>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input float-end" type="checkbox" name="selected[]" id="selected" role="switch" value="{{$tool->toolName}}"
+
                               @if ($tool->toolStatus == 1)
                                   checked
-                              @endif></td>
+                              @endif>
+                              </div>
+
+
+                            </td>
                           <td>
                               <img src="{{$tool->toolImageUrl}}" width="15%" alt="">
                           </td>
@@ -50,6 +57,5 @@
     </div>
     <!--/ Basic Bootstrap Table -->
 </div>
-
 
 @endsection

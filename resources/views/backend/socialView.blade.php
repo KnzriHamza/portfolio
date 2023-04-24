@@ -23,10 +23,15 @@
 
                   @foreach ( $socialData as $social)
                       <tr>
-                          <td><input type="checkbox" name="selected[]" id="selected" value="{{$social->socialName}}"
-                              @if ($social->socialStatus == 1)
-                                  checked
-                              @endif></td>
+                          <td>
+
+
+                            <div class="form-check form-switch mb-2">
+                                <input class="form-check-input float-end" role="switch" type="checkbox" name="selected[]" id="selected" value="{{$social->socialName}}"
+                                @if ($social->socialStatus == 1)
+                                    checked
+                                @endif>                              </div>
+                            </td>
                               <td>{{$social->socialName}}</td>
                           <td >
                               <img src="{{$social->socialImageUrl}}" width="15%" alt="">

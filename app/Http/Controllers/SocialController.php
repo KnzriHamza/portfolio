@@ -15,7 +15,6 @@ class SocialController extends Controller
 
     public function SaveInfo(Request $request)
     {
-        dd($request);
         $selectedSocials = $request->selected;
         $SocialData = Social::all();
             foreach ($SocialData as $baseSocial) {
