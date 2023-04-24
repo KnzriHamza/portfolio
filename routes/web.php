@@ -2,6 +2,14 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontPage;
+use App\Http\Controllers\FreelancerController;
+use App\Http\Controllers\ExperienceController;
+use App\Http\Controllers\ToolController;
+use App\Http\Controllers\SocialController;
+use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\HobbyController;
+
+
 
 
 /*
@@ -16,16 +24,31 @@ use App\Http\Controllers\FrontPage;
 */
 
 
+
+
+
 Route::get('/', [FrontPage::class,'DisplayInfo'])->name('index');
 
-Route::prefix('dashboard/users/')->group(function (){
 
 
-});
+Route::get('/user', [FreelancerController::class,'DisplayInfo'])->name('list.user');
+Route::post('/user/save', [FreelancerController::class,'SaveInfo'])->name('save.user');
 
-Route::get('/user', function () {
-    return view('backend.userView');
-})->name('user');
+
+Route::get('/experience', [ExperienceController::class,'DisplayInfo'])->name('list.experience');
+Route::post('/experience/save', [ExperienceController::class,'SaveInfo'])->name('save.experience');
+
+Route::get('/tools', [ToolController::class,'DisplayInfo'])->name('list.tools');
+Route::post('/tools/save', [ToolController::class,'SaveInfo'])->name('save.tools');
+
+Route::get('/socials', [SocialController::class,'DisplayInfo'])->name('list.socials');
+Route::post('/socials/save', [SocialController::class,'SaveInfo'])->name('save.socials');
+
+Route::get('/projects', [ProjectController::class,'DisplayInfo'])->name('list.projects');
+Route::post('/projects/save', [ProjectController::class,'SaveInfo'])->name('save.project');
+
+Route::get('/hobbys', [HobbyController::class,'DisplayInfo'])->name('list.hobbies');
+Route::post('/hobbys/save', [HobbyController::class,'SaveInfo'])->name('save.hobbies');
 
 Route::middleware([
     'auth:sanctum',

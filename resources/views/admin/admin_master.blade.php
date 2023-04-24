@@ -15,7 +15,7 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>Fluid - Layouts | Sneat - Bootstrap 5 HTML Admin Template - Pro</title>
+    <title>Portfolio</title>
 
     <meta name="description" content="" />
 
@@ -52,22 +52,21 @@
     <script src="{{asset('backend/js/config.js')}}"></script>
   </head>
 
+
   <body>
     <!-- Layout wrapper -->
     <div class="layout-wrapper layout-content-navbar">
       <div class="layout-container">
         <!-- Menu -->
 
-        @include('admin.body.header')
-
+        @include('admin.body.menu')
         <!-- / Menu -->
 
         <!-- Layout container -->
         <div class="layout-page">
           <!-- Navbar -->
 
-          @include('admin.body.menu')
-
+          @include('admin.body.header')
 
           <!-- / Navbar -->
 
@@ -75,17 +74,40 @@
           <div class="content-wrapper">
             <!-- Content -->
 
-            <div class="container-fluid flex-grow-1 container-p-y">
-              <!-- Layout Demo -->
-              @yield('mainAdmin')
-              <!--/ Layout Demo -->
-            </div>
+            @yield('mainAdmin')
             <!-- / Content -->
 
             <!-- Footer -->
+            <footer class="content-footer footer bg-footer-theme">
+              <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
+                <div class="mb-2 mb-md-0">
+                  ©
+                  <script>
+                    document.write(new Date().getFullYear());
+                  </script>
+                  , made with ❤️ by
+                  <a href="https://themeselection.com" target="_blank" class="footer-link fw-bolder">ThemeSelection</a>
+                </div>
+                <div>
+                  <a href="https://themeselection.com/license/" class="footer-link me-4" target="_blank">License</a>
+                  <a href="https://themeselection.com/" target="_blank" class="footer-link me-4">More Themes</a>
 
+                  <a
+                    href="https://themeselection.com/demo/sneat-bootstrap-html-admin-template/documentation/"
+                    target="_blank"
+                    class="footer-link me-4"
+                    >Documentation</a
+                  >
 
-
+                  <a
+                    href="https://github.com/themeselection/sneat-html-admin-template-free/issues"
+                    target="_blank"
+                    class="footer-link me-4"
+                    >Support</a
+                  >
+                </div>
+              </div>
+            </footer>
             <!-- / Footer -->
 
             <div class="content-backdrop fade"></div>
@@ -104,6 +126,7 @@
 
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
+
     <script src="{{asset('backend/vendor/libs/jquery/jquery.js')}}"></script>
     <script src="{{asset('backend/vendor/libs/popper/popper.js')}}"></script>
     <script src="{{asset('backend/vendor/js/bootstrap.js')}}"></script>
@@ -122,4 +145,8 @@
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
   </body>
+
+
+
+
 </html>
