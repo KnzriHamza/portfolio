@@ -311,54 +311,21 @@
       </div>
       <div>
 
-        <!-- link 1 -->
-        <a href="" target="" class="flex items-center w-full rounded-xl p-1.5 mb-2 bg-slate-900 group hover:bg-slate-800 transition-shadow duration-200">
+        <!-- link -->
+         @foreach ($linksData as $link)
+             <a href="{{$link->linkUrl}}" target="" class="flex items-center w-full rounded-xl p-1.5 mb-2 bg-slate-900 group hover:bg-slate-800 transition-shadow duration-200">
           <div class="flex w-full text-center">
-            <div class="w-10 h-10 sm:w-12 sm:h-12 items-center flex">
-              <img src="./public/thumb-1.webp" class="p-0.5 group-hover:-rotate-[20deg] transition-all ease-in-out duration-150" />
-            </div>
+            <!--<div class="w-10 h-10 sm:w-12 sm:h-12 items-center flex">
+              <img src="'//asset('frontend/public/thumb-4.webp')" class="p-0.5 group-hover:-rotate-[20deg] transition-all ease-in-out duration-150" />
+            </div> -->
             <h2 class="flex justify-center items-center font-bold w-full text-sm text-gray-200 -ml-10 group-hover:tracking-widest ease-in-out duration-150">
-              Example website - 1
+              {{$link->linkName}}
             </h2>
           </div>
         </a>
+         @endforeach
 
-        <!-- link 2 -->
-        <a href="" target="" class="flex items-center w-full rounded-xl p-1.5 mb-2 bg-slate-900 group hover:bg-slate-800 transition-shadow duration-200">
-          <div class="flex w-full text-center">
-            <div class="w-10 h-10 sm:w-12 sm:h-12 items-center flex">
-              <img src="./public/thumb-2.webp" class="p-0.5 group-hover:-rotate-[20deg] transition-all ease-in-out duration-150" />
-            </div>
-            <h2 class="flex justify-center items-center font-bold w-full text-sm text-gray-200 -ml-10 group-hover:tracking-widest ease-in-out duration-150">
-              Example website - 2
-            </h2>
-          </div>
-        </a>
-
-        <!-- link 3 -->
-        <a href="" target="" class="flex items-center w-full rounded-xl p-1.5 mb-2 bg-slate-900 group hover:bg-slate-800 transition-shadow duration-200">
-          <div class="flex w-full text-center">
-            <div class="w-10 h-10 sm:w-12 sm:h-12 items-center flex">
-              <img src="./public/thumb-3.webp" class="p-0.5 group-hover:-rotate-[20deg] transition-all ease-in-out duration-150" />
-            </div>
-            <h2 class="flex justify-center items-center font-bold w-full text-sm text-gray-200 -ml-10 group-hover:tracking-widest ease-in-out duration-150">
-              Example website - 3
-            </h2>
-          </div>
-        </a>
-
-        <!-- link 4 -->
-        <a href="" target="" class="flex items-center w-full rounded-xl p-1.5 mb-2 bg-slate-900 group hover:bg-slate-800 transition-shadow duration-200">
-          <div class="flex w-full text-center">
-            <div class="w-10 h-10 sm:w-12 sm:h-12 items-center flex">
-              <img src="./public/thumb-4.webp" class="p-0.5 group-hover:-rotate-[20deg] transition-all ease-in-out duration-150" />
-            </div>
-            <h2 class="flex justify-center items-center font-bold w-full text-sm text-gray-200 -ml-10 group-hover:tracking-widest ease-in-out duration-150">
-              Example website - 4
-            </h2>
-          </div>
-        </a>
-
+       
         <!-- and so on -->
       </div>
     </div>
@@ -391,38 +358,21 @@
         Some of my photos.
       </div>
       <div>
-        <div class="flex flex-col-reverse sm:flex-row mb-8">
-          <div class="flex basis-full sm:basis-1/3 text-gray-200 items-center">
-            <p class="text-sm">
-              Description of the first photo.
-            </p>
-          </div>
+      @foreach ( $galleryElement as $photo)
+          <div class="flex flex-col-reverse sm:flex-row mb-8">
+            <div class="flex basis-full sm:basis-1/3 text-gray-200 items-center">
+              <p class="text-sm">
+                {{$photo->photoDescription}}
+              </p>
+            </div>
           <div class="basis-full sm:basis-2/3">
-            <img class="rounded-xl" src="./public/gallery-background.webp" />
+            <img class="rounded-xl" src="{{asset('images/'.$photo->photoUrl)}}" />
           </div>
         </div>
+      @endforeach
+        
 
-        <div class="flex flex-col-reverse sm:flex-row mb-8">
-          <div class="flex basis-full sm:basis-1/3 text-gray-200 items-center">
-            <p class="text-sm">
-              Description of the second photo.
-            </p>
-          </div>
-          <div class="basis-full sm:basis-2/3">
-            <img class="rounded-xl" src="./public/gallery-background.webp" />
-          </div>
-        </div>
-
-        <div class="flex flex-col-reverse sm:flex-row mb-8">
-          <div class="flex basis-full sm:basis-1/3 text-gray-200 items-center">
-            <p class="text-sm">
-              Description of the third photo.
-            </p>
-          </div>
-          <div class="basis-full sm:basis-2/3">
-            <img class="rounded-xl" src="./public/gallery-background.webp" />
-          </div>
-        </div>
+        
       </div>
     </div>
 
@@ -454,7 +404,7 @@
     <footer class="my-32">
       <div class="text-center">
         <span class="text-xs text-gray-200">
-          designed by Jakub Gania
+          Brought to Life by {{$informationData->name}}
         </span>
       </div>
     </footer>

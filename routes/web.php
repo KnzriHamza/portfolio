@@ -8,7 +8,8 @@ use App\Http\Controllers\ToolController;
 use App\Http\Controllers\SocialController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\HobbyController;
-
+use App\Http\Controllers\LinkController;
+use App\Http\Controllers\GalleryElementController;
 
 
 
@@ -49,6 +50,13 @@ Route::post('/projects/save', [ProjectController::class,'SaveInfo'])->name('save
 
 Route::get('/hobbys', [HobbyController::class,'DisplayInfo'])->name('list.hobbies');
 Route::post('/hobbys/save', [HobbyController::class,'SaveInfo'])->name('save.hobbies');
+
+Route::get('/Links', [LinkController::class,'DisplayInfo'])->name('list.links');
+Route::post('/Links/save', [LinkController::class,'SaveInfo'])->name('save.links');
+
+Route::get('/gallery', [GalleryElementController::class,'DisplayInfo'])->name('list.gallery');
+Route::post('/gallery/save', [GalleryElementController::class,'SaveInfo'])->name('save.gallery');
+
 
 Route::middleware([
     'auth:sanctum',

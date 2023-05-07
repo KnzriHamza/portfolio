@@ -143,7 +143,7 @@
         </li>
         <li class="menu-item">
           <a
-            href="{{route('list.projects')}}"
+            href="{{route('list.links')}}"
             class="menu-link"
           >
             <i class="menu-icon tf-icons bx bx-support"></i>
@@ -161,8 +161,7 @@
         </li>
         <li class="menu-item">
           <a
-            href="https://github.com/themeselection/sneat-html-admin-template-free/issues"
-            target="_blank"
+            href="{{route('list.gallery')}}"
             class="menu-link"
           >
             <i class="menu-icon tf-icons bx bx-support"></i>

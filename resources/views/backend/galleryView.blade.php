@@ -8,13 +8,13 @@
         </button>
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasEnd" aria-labelledby="offcanvasEndLabel" style="visibility: hidden;" aria-hidden="true">
             <div class="card-body">
-                <form method="POST" action="{{route('save.links')}}">
+                <form method="POST" enctype="multipart/form-data" action="{{route('save.gallery')}}">
                     @csrf
                   <div class="mb-3">
                     <label class="form-label" for="linkName">Link Name</label>
-                    <input class="form-control" id="linkName" name="linkName" rows="3"/>
+                    <input class="form-control" id="photoDescription" name="photoDescription" rows="3"/>
                     <label class="form-label" for="linkName">Link Url</label>
-                    <input class="form-control" id="linkUrl" name="linkUrl" rows="3"/>
+                    <input class="form-control" type="file" id="photoFile" name="photoFile">
                   </div>
 
                     <div class="mb-3">
@@ -41,11 +41,13 @@
             </tr>
           </thead>
           <tbody class="table-border-bottom-0">
-            @foreach ($data as $link)
+            @foreach ($data as $photo)
             <tr>
-              <td>{{$link->linkName}}</td>
+              <td>{{$photo->photoDescription}}</td>
               <td>
-                {{$link->linkUrl}}
+                        <img src="{{asset('images/'.$photo->photoUrl)}}" width="96" />
+
+                  
                 </td>
             </tr>
             @endforeach

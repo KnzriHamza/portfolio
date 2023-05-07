@@ -13,10 +13,7 @@ return new class extends Migration
     {
         Schema::create('gallery_elements', function (Blueprint $table) {
             $table->id();
-            $table->string('projectName');
-            $table->string('projectDescription');
-            $table->string('liveUrl');
-            $table->string('githubUrl');
+            $table->string('photoDescription');
             $table->string('photoUrl');
 
             $table->timestamps();

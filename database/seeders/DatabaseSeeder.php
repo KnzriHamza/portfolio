@@ -17,7 +17,12 @@ class DatabaseSeeder extends Seeder
         $this->call(SocialSeeder::class);
         // \App\Models\User::factory(10)->create();
 
+        DB::table('users')->insert([
+            'name' => "Hamza Kanzari",
+            'email' => "admin@admin.com",
+            'password' => bcrypt('12345678'),
 
+        ]);
 
         DB::table('freelancers')->insert([
             'name' => "Hamza Kanzari",
