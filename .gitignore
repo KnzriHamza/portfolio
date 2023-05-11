@@ -17,3 +17,10 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+.gitignore
+.gitignore
+package.json
+package-lock.json
+docker-compose.yml
+resources/views/index.blade copy.php
+.gitignore
