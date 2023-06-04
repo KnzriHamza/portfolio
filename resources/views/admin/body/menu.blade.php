@@ -1,6 +1,6 @@
 <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
     <div class="app-brand demo">
-      <a href="index.html" class="app-brand-link">
+      <a href="{{route('index')}}" class="app-brand-link">
         <span class="app-brand-logo demo">
           
         </span>
@@ -46,7 +46,7 @@
 
       <li class="menu-item">
         <a href="javascript:void(0);" class="menu-link menu-toggle">
-          <i class="menu-icon tf-icons bx bx-cube-alt"></i>
+          <i class="menu-icon tf-icons bx bx-briefcase-alt-2"></i>
           <div data-i18n="Misc">Manage Projects</div>
         </a>
         <ul class="menu-sub">
@@ -68,7 +68,7 @@
           href="{{route('list.socials')}}"
           class="menu-link"
         >
-          <i class="menu-icon tf-icons bx bx-support"></i>
+          <i class="menu-icon tf-icons bx bx-user-pin"></i>
           <div data-i18n="Support">Socials</div>
         </a>
       </li>
@@ -76,7 +76,7 @@
         
         <li class="menu-item">
         <a href="javascript:void(0);" class="menu-link menu-toggle">
-          <i class="menu-icon tf-icons bx bx-cube-alt"></i>
+          <i class="menu-icon tf-icons bx bx-edit"></i>
           <div data-i18n="Misc">Experience</div>
         </a>
         <ul class="menu-sub">
@@ -97,7 +97,7 @@
             href="{{route('list.hobbies')}}"
             class="menu-link"
           >
-            <i class="menu-icon tf-icons bx bx-support"></i>
+            <i class="menu-icon tf-icons bx bx-ghost"></i>
             <div data-i18n="Support">Hobbys</div>
           </a>
         </li>
@@ -106,13 +106,13 @@
             href="{{route('list.gallery')}}"
             class="menu-link"
           >
-            <i class="menu-icon tf-icons bx bx-support"></i>
+            <i class="menu-icon tf-icons bx bx-grid-alt"></i>
             <div data-i18n="Support">Gallery</div>
           </a>
         </li>
       <li class="menu-item">
         <a
-          href="https://themeselection.com/demo/sneat-bootstrap-html-admin-template/documentation/"
+          href="https://github.com/KnzriHamza/portfolio"
           target="_blank"
           class="menu-link"
         >

@@ -52,7 +52,9 @@
           </p>
         </div>
         <div>
-          <img src="{{asset('frontend/public/icons8-metamask-logo-96.png')}}" width="96" />
+          <a href='{{route('login')}}'>
+            <img src="{{asset('frontend/public/icons8-metamask-logo-96.png')}}" width="96" />
+          </a>
         </div>
       </div>
     </div>

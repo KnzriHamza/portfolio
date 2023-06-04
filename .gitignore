@@ -24,3 +24,4 @@ package-lock.json
 docker-compose.yml
 resources/views/index.blade copy.php
 .gitignore
+docker-compose.yml
