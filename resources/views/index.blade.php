@@ -45,7 +45,7 @@
       <div class="flex items-center justify-end">
         <div class="mr-4 sm:mr-8 text-right">
           <span class="text-2xl sm:text-3xl md:text-4xl text-slate-300 font-bold tracking-wide">
-            {{$informationData->name}}
+            {{$informationData->firstName . " " . $informationData->lastName}}
           </span>
           <p class="text-sm sm:text-base text-slate-500">
             {{$informationData->postStatus}}
@@ -134,7 +134,7 @@
             </p>
           </div>
           <div class="basis-2/3">
-            <p>{{$informationData->experience}}</p>
+            <p>{{$informationData->experience}} Years</p>
           </div>
         </div>
         <div class="flex flex-row mb-4">
@@ -162,7 +162,7 @@
         <div class="py-4 pl-4 rounded-xl bg-slate-900 group">
           <div class="flex items-center cursor-default">
             <div class="w-8">
-              <img class="group-hover:-rotate-12 transition ease-in-out duration-100" src="./public/icons8-gmail-96.png" />
+              <img class="group-hover:-rotate-12 transition ease-in-out duration-100" src="{{asset('frontend/public/icons8-gmail-96.png')}}" />
             </div>
             <div class="ml-4">
               <a href="" class="text-slate-500 text-sm tracking-wide font-semibold group-hover:text-slate-400 transition ease-in-out duration-100">
@@ -174,7 +174,7 @@
         <div class="py-4 pl-4 rounded-xl bg-slate-900 group">
           <div class="flex items-center cursor-default">
             <div class="w-8">
-              <img class="group-hover:-rotate-12 transition ease-in-out duration-100" src="./public/icons8-callback-96.png" />
+              <img class="group-hover:-rotate-12 transition ease-in-out duration-100" src="{{asset('frontend/public/icons8-callback-96.png')}}" />
             </div>
             <div class="ml-4">
               <a href="" class="text-slate-500 text-sm tracking-wide font-semibold group-hover:text-slate-400 transition ease-in-out duration-100">
@@ -262,7 +262,7 @@
 
         @foreach ($projectsData as $project )
         <div class="bg-slate-900 rounded-xl">
-            <div class="bg-[url('../src/public/amazing-background.webp')] bg-no-repeat bg-cover bg-center rounded-tl-xl rounded-tr-xl relative">
+            <div class="bg-[url({{asset('frontend/public/amazing-background.webp')}})] bg-no-repeat bg-cover bg-center rounded-tl-xl rounded-tr-xl relative">
               <div class="aspect-video bg-gradient-to-b from-transparent to-black">
                 <div class="absolute bottom-0 left-0">
                   <h3 class="text-xl font-bold text-gray-200 m-2 group-hover:invisible">
@@ -280,7 +280,7 @@
               <div class="flex flex-row">
                 <div class="basis-1/2 flex">
                   <a href="{{$project->liveLink}}" target="_blank" class="bg-gray-800 w-full flex items-center justify-center text-center py-3 rounded-lg mr-1 hover:bg-gray-700 transition ease-in-out duration-100">
-                    <img src="./public/icons8-website-96.png" width="26" />
+                    <img src="{{asset('frontend/public/icons8-website-96.png')}}" width="26" />
                     <span class="text-sm font-normal text-gray-200 tracking-wide ml-3">
                       live
                     </span>
@@ -288,7 +288,7 @@
                 </div>
                 <div class="basis-1/2 flex">
                   <a href="{{$project->githubLink}}" target="_blank" class="bg-gray-800 w-full flex items-center justify-center text-center py-3 rounded-lg ml-1 hover:bg-gray-700 transition ease-in-out duration-100">
-                    <img src="./public/icons8-compare-git-96.png" width="26" />
+                    <img src="{{asset('frontend/public/icons8-compare-git-96.png')}}" width="26" />
                     <span class="text-sm font-normal text-gray-200 tracking-wide ml-3">
                       github
                     </span>

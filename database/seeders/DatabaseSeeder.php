@@ -25,7 +25,9 @@ class DatabaseSeeder extends Seeder
         ]);
 
         DB::table('freelancers')->insert([
-            'name' => "Hamza Kanzari",
+            'firstName' => "Hamza",
+            'lastName' => "Kanzari",
+
             'postStatus' => "Full Stack Web Dev",
             'country' => "Gemany",
             'birthdate' => "1993.08.18",

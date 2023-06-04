@@ -43,11 +43,11 @@
                         <div class="row">
                           <div class="mb-3 col-md-6">
                             <label for="name" class="form-label">First Name</label>
-                            <input id="name" name="name" type="text" class="form-control" id="basic-default-fullname" placeholder="{{$data->name}}" />
+                            <input id="name" name="firstName" type="text" class="form-control" id="basic-default-fullname" placeholder="{{$data->firstName}}" />
                           </div>
                           <div class="mb-3 col-md-6">
                             <label for="lastName" class="form-label">Last Name</label>
-                            <input class="form-control" type="text" name="lastName" id="lastName" value="Doe">
+                            <input class="form-control" type="text" name="lastName" id="lastName"  placeholder="{{$data->lastName}}">
                           </div>
                           <div class="mb-3 col-md-6">
                             <label for="email" class="form-label">E-mail</label>
