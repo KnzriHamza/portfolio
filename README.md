@@ -8,16 +8,37 @@
 </p>
 
 
-## Frontend Template Credit Goes To <a href="https://github.com/jakubgania/">Jakubgania</a>
 
-## Backend Template Credit Goes To <a href="https://github.com/themeselection/sneat-bootstrap-html-admin-template-free">Sneat Admin</a>
+## - Portfolio App - Showcase Your Skills and Achievements
 
-Im Just Doing the Backend for fun :D
+Welcome to the Portfolio App, your go-to platform for building and presenting your professional portfolio. Whether you're a freelancer, an artist, a developer, or someone looking to highlight their accomplishments and capabilities, our app provides the perfect solution to create a compelling portfolio that reflects your unique talents and expertise.
 
-## Code of Conduct
+## - Why Choose the Portfolio App?
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Creating a portfolio that effectively represents your work can be a challenging task. However, with the Portfolio App, it becomes a seamless and enjoyable experience. Our app offers a user-friendly interface and a range of features that empower you to showcase your skills, projects, and experiences in an engaging and visually appealing way. Let your work speak for itself and leave a lasting impression on potential clients, employers, or collaborators.
+###With More Key Features And Major Updates Coming Soon
 
-## License
 
-Software under the [MIT license](https://opensource.org/licenses/MIT).
+## - How to run
+
+### 1. Clone this repo ([how to clone a repo](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository))
+### 2. Install dependencies
+
+
+After cloning the repo in your machine, run:
+
+```
+composer install
+```
+```
+npm install
+```
+
+### 3. Run 
+```
+docker-compose up -d
+```
+
+That's it 🎉
+
+---
