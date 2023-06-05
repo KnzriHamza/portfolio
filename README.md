@@ -34,7 +34,12 @@ composer install
 npm install
 ```
 
-### 3. Run 
+### 3. Run Migration and Seed Data
+```
+./vendr/bin/sail shell && php artisan migrate --seed
+```
+
+### 4. Run 
 ```
 docker-compose up -d
 ```
